@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twin - Faculty of Arts, CU</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@3.0.0/Control.FullScreen.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="logo" style="text-decoration: none;">Twin<span>Team</span></a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active tr" data-en="Home" data-ar="الرئيسية">Home</a></li>
+            <li><a href="#project" class="tr" data-en="Project" data-ar="المشروع">Project</a></li>
+            <li><a href="#reports" class="tr" data-en="Dashboard" data-ar="لوحة البيانات">Dashboard</a></li>
+            <li><a href="#maps" class="tr" data-en="Maps" data-ar="الخرائط">Maps</a></li>
+            <li><a href="#contact" class="tr" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a></li>
+        </ul>
+        <button id="langToggle" class="lang-btn">عربي</button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="tr" data-en="Digital Twin<br><span>Faculty of Arts - Cairo University</span>" data-ar="التوأمة الرقمية<br><span>لكلية الآداب - جامعة القاهرة</span>">
+                Digital Twin<br><span>Faculty of Arts - Cairo University</span>
+            </h1>
+            <p class="tr" data-en="The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus, facilitating facility management and highly accurate spatial data analysis." data-ar="مستقبل التخطيط المكاني الذكي. نموذج رقمي تفاعلي يدمج البيانات المكانية والهندسية لإنشاء نسخة طبق الأصل من الحرم الجامعي، مما يسهل إدارة المنشآت وتحليل البيانات المكانية بدقة متناهية.">
+                The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus, facilitating facility management and highly accurate spatial data analysis.
+            </p>
+            <div class="buttons">
+                <a href="#project" class="btn primary-btn tr" data-en="Explore 3D Model" data-ar="استكشف النموذج الثلاثي">Explore 3D Model</a>
+                <a href="#maps" class="btn secondary-btn tr" data-en="Interactive Maps" data-ar="الخرائط التفاعلية">Interactive Maps</a>
+            </div>
+        </div>
+        <div class="glow-effect"></div>
+    </section>
+
+    <section id="project" class="project-section">
+        <h2 class="section-title tr" data-en="Project <span>Phases</span>" data-ar="مراحل <span>المشروع</span>">Project <span>Phases</span></h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">📐</div>
+                <h3 class="tr" data-en="1. Spatial Data Acquisition" data-ar="1. الرفع المساحي وجمع البيانات">1. Spatial Data Acquisition</h3>
+                <p class="tr" data-en="Utilizing advanced surveying equipment (Total Station, Laser Scanners) and Photogrammetry to accurately capture the exact dimensions of the Faculty of Arts buildings." data-ar="استخدام أجهزة الرفع المساحي المتقدمة (Total Station، والمسح بالليزر) والتصوير المساحي لرفع أبعاد مباني كلية الآداب بدقة متناهية.">
+                    Utilizing advanced surveying equipment (Total Station, Laser Scanners) and Photogrammetry to accurately capture the exact dimensions of the Faculty of Arts buildings.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏛️</div>
+                <h3 class="tr" data-en="2. 3D Modeling (BIM)" data-ar="2. النمذجة ثلاثية الأبعاد (BIM)">2. 3D Modeling (BIM)</h3>
+                <p class="tr" data-en="Transforming the raw spatial data into highly detailed 3D architectural models that represent the structural reality of the campus." data-ar="تحويل البيانات المكانية الخام إلى نماذج معمارية ثلاثية الأبعاد عالية الدقة تمثل الواقع الهيكلي للحرم الجامعي.">
+                    Transforming the raw spatial data into highly detailed 3D architectural models that represent the structural reality of the campus.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔗</div>
+                <h3 class="tr" data-en="3. Data Integration & Twin" data-ar="3. ربط البيانات والتوأمة">3. Data Integration & Twin</h3>
+                <p class="tr" data-en="Linking the 3D models with descriptive and functional data (GIS integration) to create a live, interactive Digital Twin for smart management." data-ar="ربط النماذج ثلاثية الأبعاد بالبيانات الوصفية والوظيفية (دمج نظم المعلومات الجغرافية) لإنشاء توأم رقمي تفاعلي حي للإدارة الذكية.">
+                    Linking the 3D models with descriptive and functional data (GIS integration) to create a live, interactive Digital Twin for smart management.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reports" class="dashboard-section">
+        <div class="dashboard-overlay"></div>
+        <div class="dashboard-content">
+            <h2 class="section-title tr" data-en="ArcGIS <span>Dashboard</span>" data-ar="لوحة بيانات <span>ArcGIS</span>">ArcGIS <span>Dashboard</span></h2>
+            <div class="dashboard-container">
+                <iframe src="https://www.arcgis.com/apps/dashboards/ae659e7e123748f082b761e3934c1c9a" width="100%" height="650px" style="border: 2px solid rgba(0, 240, 255, 0.3); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps" class="maps-section">
+        <h2 class="section-title tr" data-en="Interactive <span>Maps</span>" data-ar="الخرائط <span>التفاعلية</span>">Interactive <span>Maps</span></h2>
+        <div class="map-container">
+            <div class="map-controls">
+                <h3 class="tr" data-en="Map Controls" data-ar="التحكم في الخريطة">Map Controls</h3>
+                <label class="layer-toggle">
+                    <input type="checkbox" checked>
+                    <span class="tr" data-en="3D Building Model (BIM)" data-ar="النموذج ثلاثي الأبعاد (BIM)">3D Building Model (BIM)</span>
+                </label>
+                <button id="zoomBtn" class="btn primary-btn tr" style="width: 100%; margin-top: 20px; font-size: 14px; padding: 10px;" data-en="Zoom to Library" data-ar="التركيز على المكتبة التراثية">
+                    Zoom to Library
+                </button>
+            </div>
+            <div id="gis-map" class="map-frame"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title tr" data-en="Contact <span>Twin Team</span>" data-ar="تواصل مع <span>الفريق</span>">Contact <span>Twin Team</span></h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" class="tr-placeholder" data-en="Your Name" data-ar="الاسم بالكامل" placeholder="Your Name" required>
+                <input type="email" class="tr-placeholder" data-en="Your Email" data-ar="البريد الإلكتروني" placeholder="Your Email" required>
+                <textarea rows="5" class="tr-placeholder" data-en="Your Message" data-ar="رسالتك" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn primary-btn tr" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="chatbot-toggler" id="chatToggler">🤖</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>TwinBot <span>AI</span></h3>
+            <button id="closeChat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                مرحباً! أنا TwinBot، المساعد الذكي لمشروع Twin Team. كيف يمكنني مساعدتك؟ (جرب سؤالي عن: الخريطة، البيانات، المشروع، أو التواصل)
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا..." autocomplete="off">
+            <button id="sendChatBtn">➤</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.fullscreen@3.0.0/Control.FullScreen.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
