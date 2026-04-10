@@ -162,3 +162,21 @@ function processBotResponse(text) {
 
     appendMessage('bot', reply);
 }
+// ==========================================
+// 5. تشغيل قائمة الموبايل (Hamburger Menu)
+// ==========================================
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinksContainer = document.getElementById('navLinks');
+
+// فتح وإغلاق القائمة عند الضغط على الزر
+mobileMenu.addEventListener('click', () => {
+    navLinksContainer.classList.toggle('active');
+});
+
+// إغلاق القائمة تلقائياً عند الضغط على أي قسم بداخلها
+const mobileNavItems = document.querySelectorAll('.nav-links li a');
+mobileNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinksContainer.classList.remove('active');
+    });
+});

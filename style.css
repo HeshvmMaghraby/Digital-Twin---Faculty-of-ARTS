@@ -519,3 +519,113 @@ html[dir="rtl"] .chat-input-area button {
     margin-left: 0;
     margin-right: 10px;
 }
+/* هذه التنسيقات ستعمل فقط على الشاشات التي يقل عرضها عن 768 بيكسل (حجم الموبايل والتابلت الصغير) */
+@media (max-width: 768px) {
+    
+    /* مثال: إذا كان لديك عناصر بجانب بعضها، اجعلها تظهر تحت بعضها */
+    .container {
+        flex-direction: column; 
+    }
+
+    /* مثال: تصغير حجم الخط ليتناسب مع الموبايل */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* مثال: جعل عرض الصور أو الأقسام 100% لتملأ الشاشة بدلاً من الخروج عنها */
+    .box, img {
+        width: 100%;
+    }
+}
+/* =========================================
+   التجاوب مع شاشات الموبايل (Responsive Design)
+========================================= */
+
+/* تصميم زر القائمة (مخفي على الكمبيوتر) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001; /* ليكون فوق القائمة */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-neon);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* التعديلات التي ستعمل فقط على شاشات الموبايل (عرض 768px فأقل) */
+@media (max-width: 768px) {
+    
+    /* إظهار زر القائمة وإخفاء زر اللغة ليُنقل داخل القائمة أو بجوارها */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* تحويل شريط التنقل لقائمة منسدلة عمودية */
+    .nav-links {
+        display: none; /* مخفية افتراضياً */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* أسفل شريط التنقل */
+        left: 0;
+        background: rgba(11, 15, 25, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+        border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    /* هذا الكلاس سيضيفه الجافاسكريبت لإظهار القائمة عند الضغط */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* توسيط المحتوى وإصلاح الإزاحة لليسار */
+    .hero {
+        padding: 0 15px;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* تصغير العنوان ليناسب الشاشة */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* ترتيب الأزرار تحت بعضها لتأخذ العرض بالكامل */
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* منع أي عنصر من الخروج عن حواف الشاشة والتسبب في مساحة بيضاء */
+    body, html {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 80px 15px; /* تقليل المسافات الجانبية */
+    }
+
+    .map-controls {
+        width: 100%;
+    }
+}
