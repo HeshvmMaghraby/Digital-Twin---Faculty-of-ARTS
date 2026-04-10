@@ -180,3 +180,44 @@ mobileNavItems.forEach(item => {
         navLinksContainer.classList.remove('active');
     });
 });
+// ==========================================
+// 5. زر تثبيت التطبيق (PWA Install)
+// ==========================================
+let deferredPrompt;
+const installAppBtn = document.getElementById('installAppBtn');
+
+// المتصفح بيبعت الحدث ده لما يتأكد إن الموقع جاهز ينزل كأبلكيشن
+window.addEventListener('beforeinstallprompt', (e) => {
+    // منع المتصفح من إظهار رسالته التلقائية المزعجة
+    e.preventDefault();
+    // حفظ الحدث عشان نستخدمه لما المستخدم يدوس على الزرار
+    deferredPrompt = e;
+    // إظهار الزرار بتاعنا
+    installAppBtn.style.display = 'block';
+});
+
+// لما المستخدم يدوس على زرار "تثبيت التطبيق"
+installAppBtn.addEventListener('click', async () => {
+    if (deferredPrompt !== null) {
+        // إظهار رسالة التثبيت الأصلية بتاعة الموبايل
+        deferredPrompt.prompt();
+        
+        // انتظار رد المستخدم (وافق ولا رفض)
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+        } else {
+            console.log('User dismissed the install prompt');
+        }
+        
+        // تصفير المتغير وإخفاء الزرار بعد الاستخدام
+        deferredPrompt = null;
+        installAppBtn.style.display = 'none';
+    }
+});
+
+// إخفاء الزرار لو التطبيق نزل بالفعل
+window.addEventListener('appinstalled', () => {
+    installAppBtn.style.display = 'none';
+    console.log('PWA was installed');
+});
