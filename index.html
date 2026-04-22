@@ -6,17 +6,14 @@
     <title>Digital Twin - Faculty of Arts, CU</title>
     
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@3.0.0/Control.FullScreen.css" />
     <link rel="manifest" href="manifest.json">
 
-<meta name="theme-color" content="#00f0ff">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="theme-color" content="#00f0ff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
 </head>
 <body>
 
@@ -44,11 +41,11 @@
             <h1 class="tr" data-en="Digital Twin<br><span>Faculty of Arts - Cairo University</span>" data-ar="التوأمة الرقمية<br><span>لكلية الآداب - جامعة القاهرة</span>">
                 Digital Twin<br><span>Faculty of Arts - Cairo University</span>
             </h1>
-            <p class="tr" data-en="The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus, facilitating facility management and highly accurate spatial data analysis." data-ar="مستقبل التخطيط المكاني الذكي. نموذج رقمي تفاعلي يدمج البيانات المكانية والهندسية لإنشاء نسخة طبق الأصل من الحرم الجامعي، مما يسهل إدارة المنشآت وتحليل البيانات المكانية بدقة متناهية.">
-                The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus, facilitating facility management and highly accurate spatial data analysis.
+            <p class="tr" data-en="The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus." data-ar="مستقبل التخطيط المكانى الذكى. نموذج رقمى تفاعلى يدمج البيانات المكانية والهندسية لإنشاء نسخة طبق الأصل من الحرم الجامعى.">
+                The future of smart spatial planning. An interactive digital model integrating spatial and engineering data to create an exact replica of the campus.
             </p>
             <div class="buttons">
-                <a href="#project" class="btn primary-btn tr" data-en="Explore 3D Model" data-ar="استكشف النموذج الثلاثي">Explore 3D Model</a>
+                <a href="#project" class="btn primary-btn tr" data-en="Explore 3D Model" data-ar="استكشف النموذج الثلاثى">Explore 3D Model</a>
                 <a href="#maps" class="btn secondary-btn tr" data-en="Interactive Maps" data-ar="الخرائط التفاعلية">Interactive Maps</a>
             </div>
         </div>
@@ -58,25 +55,30 @@
     <section id="project" class="project-section">
         <h2 class="section-title tr" data-en="Project <span>Phases</span>" data-ar="مراحل <span>المشروع</span>">Project <span>Phases</span></h2>
         <div class="cards-container">
-            <div class="card">
-                <div class="card-icon">📐</div>
-                <h3 class="tr" data-en="1. Spatial Data Acquisition" data-ar="1. الرفع المساحي وجمع البيانات">1. Spatial Data Acquisition</h3>
-                <p class="tr" data-en="Utilizing advanced surveying equipment (Total Station, Laser Scanners) and Photogrammetry to accurately capture the exact dimensions of the Faculty of Arts buildings." data-ar="استخدام أجهزة الرفع المساحي المتقدمة (Total Station، والمسح بالليزر) والتصوير المساحي لرفع أبعاد مباني كلية الآداب بدقة متناهية.">
-                    Utilizing advanced surveying equipment (Total Station, Laser Scanners) and Photogrammetry to accurately capture the exact dimensions of the Faculty of Arts buildings.
+            <div class="card" id="chapterOneCard" style="cursor: pointer;">
+                <div class="card-icon">📖</div>
+                <h3 class="tr" data-en="Chapter One (Introduction)" data-ar="الفصل الأول (المقدمة)">Chapter One (Introduction)</h3>
+                <p class="tr" data-en="The vision of this project is to architect a comprehensive Digital Twin framework for Cairo University campus buildings." data-ar="تتمثل رؤية هذا المشروع فى بناء إطار عمل شامل للتوأمة الرقمية لمبانى الحرم الجامعى بجامعة القاهرة.">
+                    The vision of this project is to architect a comprehensive Digital Twin framework for Cairo University campus buildings.
                 </p>
+                <div style="margin-top: 15px; font-weight: bold; color: var(--primary-neon);">
+                    <span class="tr" data-en="Click to read more ➔" data-ar="اضغط لقراءة المزيد 🡄">Click to read more ➔</span>
+                </div>
             </div>
+
             <div class="card">
                 <div class="card-icon">🏛️</div>
                 <h3 class="tr" data-en="2. 3D Modeling (BIM)" data-ar="2. النمذجة ثلاثية الأبعاد (BIM)">2. 3D Modeling (BIM)</h3>
-                <p class="tr" data-en="Transforming the raw spatial data into highly detailed 3D architectural models that represent the structural reality of the campus." data-ar="تحويل البيانات المكانية الخام إلى نماذج معمارية ثلاثية الأبعاد عالية الدقة تمثل الواقع الهيكلي للحرم الجامعي.">
-                    Transforming the raw spatial data into highly detailed 3D architectural models that represent the structural reality of the campus.
+                <p class="tr" data-en="Transforming raw spatial data into detailed 3D architectural models representing the structural reality." data-ar="تحويل البيانات المكانية الخام إلى نماذج معمارية ثلاثية الأبعاد عالية الدقة تمثل الواقع الهيكلى.">
+                    Transforming raw spatial data into detailed 3D architectural models representing the structural reality.
                 </p>
             </div>
+
             <div class="card">
                 <div class="card-icon">🔗</div>
                 <h3 class="tr" data-en="3. Data Integration & Twin" data-ar="3. ربط البيانات والتوأمة">3. Data Integration & Twin</h3>
-                <p class="tr" data-en="Linking the 3D models with descriptive and functional data (GIS integration) to create a live, interactive Digital Twin for smart management." data-ar="ربط النماذج ثلاثية الأبعاد بالبيانات الوصفية والوظيفية (دمج نظم المعلومات الجغرافية) لإنشاء توأم رقمي تفاعلي حي للإدارة الذكية.">
-                    Linking the 3D models with descriptive and functional data (GIS integration) to create a live, interactive Digital Twin for smart management.
+                <p class="tr" data-en="Linking 3D models with descriptive and functional GIS data for smart facility management." data-ar="ربط النماذج ثلاثية الأبعاد بالبيانات الوصفية والوظيفية (GIS) للإدارة الذكية للمنشآت.">
+                    Linking 3D models with descriptive and functional GIS data for smart facility management.
                 </p>
             </div>
         </div>
@@ -87,7 +89,7 @@
         <div class="dashboard-content">
             <h2 class="section-title tr" data-en="ArcGIS <span>Dashboard</span>" data-ar="لوحة بيانات <span>ArcGIS</span>">ArcGIS <span>Dashboard</span></h2>
             <div class="dashboard-container">
-                <iframe src="https://www.arcgis.com/apps/dashboards/ae659e7e123748f082b761e3934c1c9a" width="100%" height="650px" style="border: 2px solid rgba(0, 240, 255, 0.3); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" allowfullscreen></iframe>
+                <iframe src="https://www.arcgis.com/apps/dashboards/ae659e7e123748f082b761e3934c1c9a" width="100%" height="650px" style="border: 2px solid rgba(0, 240, 255, 0.3); border-radius: 10px;" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -96,14 +98,12 @@
         <h2 class="section-title tr" data-en="Interactive <span>Maps</span>" data-ar="الخرائط <span>التفاعلية</span>">Interactive <span>Maps</span></h2>
         <div class="map-container">
             <div class="map-controls">
-                <h3 class="tr" data-en="Map Controls" data-ar="التحكم في الخريطة">Map Controls</h3>
+                <h3 class="tr" data-en="Map Controls" data-ar="التحكم فى الخريطة">Map Controls</h3>
                 <label class="layer-toggle">
                     <input type="checkbox" checked>
-                    <span class="tr" data-en="3D Building Model (BIM)" data-ar="النموذج ثلاثي الأبعاد (BIM)">3D Building Model (BIM)</span>
+                    <span class="tr" data-en="3D Building Model (BIM)" data-ar="النموذج ثلاثى الأبعاد (BIM)">3D Building Model (BIM)</span>
                 </label>
-                <button id="zoomBtn" class="btn primary-btn tr" style="width: 100%; margin-top: 20px; font-size: 14px; padding: 10px;" data-en="Zoom to Library" data-ar="التركيز على المكتبة التراثية">
-                    Zoom to Library
-                </button>
+                <button id="zoomBtn" class="btn primary-btn tr" style="width: 100%; margin-top: 20px;" data-en="Zoom to Library" data-ar="التركيز على المكتبة التراثية">Zoom to Library</button>
             </div>
             <div id="gis-map" class="map-frame"></div>
         </div>
@@ -114,27 +114,46 @@
         <div class="contact-container">
             <form class="contact-form">
                 <input type="text" class="tr-placeholder" data-en="Your Name" data-ar="الاسم بالكامل" placeholder="Your Name" required>
-                <input type="email" class="tr-placeholder" data-en="Your Email" data-ar="البريد الإلكتروني" placeholder="Your Email" required>
+                <input type="email" class="tr-placeholder" data-en="Your Email" data-ar="البريد الإلكترونى" placeholder="Your Email" required>
                 <textarea rows="5" class="tr-placeholder" data-en="Your Message" data-ar="رسالتك" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn primary-btn tr" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
             </form>
         </div>
     </section>
 
-    <div class="chatbot-toggler" id="chatToggler">🤖</div>
+    <div id="chapterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="tr" data-en="Chapter One: Introduction" data-ar="الفصل الأول: المقدمة" style="color: #fff; margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--primary-neon); padding-bottom: 10px;">Chapter One: Introduction</h2>
+            <div class="modal-body" style="text-align: justify; max-height: 70vh; overflow-y: auto; padding: 10px;">
+                
+                <h3 class="tr" data-en="Project Vision" data-ar="رؤية المشروع" style="color: var(--primary-neon); margin-top: 20px;">Project Vision</h3>
+                <p class="tr" data-en="The vision is to architect a comprehensive Digital Twin framework for Cairo University campus, focusing on the Languages & Translation Building and the Main Faculty of Arts Building. It aims to establish an immersive digital environment mirroring physical infrastructure in spatial and operational dimensions." data-ar="تتمثل الرؤية فى بناء إطار عمل شامل للتوأمة الرقمية لمبانى جامعة القاهرة، مع التركيز على مبنى اللغات والترجمة والمبنى الرئيسى لكلية الآداب. يهدف المشروع لإنشاء بيئة رقمية غامرة تحاكى البنية التحتية المادية فى أبعادها المكانية والتشغيلية.">The vision is to architect a comprehensive Digital Twin framework for Cairo University campus, focusing on the Languages & Translation Building and the Main Faculty of Arts Building. It aims to establish an immersive digital environment mirroring physical infrastructure in spatial and operational dimensions.</p>
 
-    <div class="chat-window" id="chatWindow">
-        <div class="chat-header">
-            <h3>TwinBot <span>AI</span></h3>
-            <button id="closeChat">&times;</button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="message bot-message">
-                مرحباً! أنا TwinBot، المساعد الذكي لمشروع Twin Team. كيف يمكنني مساعدتك؟ (جرب سؤالي عن: الخريطة، البيانات، المشروع، أو التواصل)
+                <h3 class="tr" data-en="Problem Statement" data-ar="مشكلة المشروع" style="color: var(--primary-neon); margin-top: 20px;">Problem Statement</h3>
+                <p class="tr" data-en="Educational facilities face challenges categorized into Administrative (inefficient resource allocation, lack of real-time oversight) and Technical dimensions (absence of smart monitoring for energy and occupancy)." data-ar="تواجه المرافق التعليمية تحديات تصنف إلى أبعاد إدارية (عدم كفاءة تخصيص الموارد، نقص الرقابة الفورية) وأبعاد فنية (غياب الأنظمة الذكية لتتبع استهلاك الطاقة والإشغال).">Educational facilities face challenges categorized into Administrative (inefficient resource allocation, lack of real-time oversight) and Technical dimensions (absence of smart monitoring for energy and occupancy).</p>
+
+                <h3 class="tr" data-en="Project Objectives" data-ar="أهداف المشروع" style="color: var(--primary-neon); margin-top: 20px;">Project Objectives</h3>
+                <ul style="color: var(--text-light); line-height: 1.8; list-style-type: decimal; padding-left: 20px;">
+                    <li class="tr" data-en="Create accurate digital representation of spatial characteristics." data-ar="إنشاء تمثيل رقمى دقيق للخصائص المكانية.">Create accurate digital representation of spatial characteristics.</li>
+                    <li class="tr" data-en="Simulate daily activities and user movement." data-ar="محاكاة الأنشطة اليومية وحركة المستخدمين.">Simulate daily activities and user movement.</li>
+                    <li class="tr" data-en="Analyze space utilization efficiency." data-ar="تحليل كفاءة استخدام المساحات.">Analyze space utilization efficiency.</li>
+                    <li class="tr" data-en="Conduct comparative analysis between buildings." data-ar="إجراء تحليل مقارن بين المبانى.">Conduct comparative analysis between buildings.</li>
+                    <li class="tr" data-en="Monitor energy and resource consumption." data-ar="مراقبة استهلاك الطاقة والموارد.">Monitor energy and resource consumption.</li>
+                    <li class="tr" data-en="Support data-driven decision making." data-ar="دعم اتخاذ القرار القائم على البيانات.">Support data-driven decision making.</li>
+                    <li class="tr" data-en="Improve operational efficiency." data-ar="تحسين الكفاءة التشغيلية.">Improve operational efficiency.</li>
+                    <li class="tr" data-en="Develop a scalable framework for other buildings." data-ar="تطوير إطار عمل قابل للتوسع للمبانى الأخرى.">Develop a scalable framework for other buildings.</li>
+                </ul>
             </div>
         </div>
+    </div>
+
+    <div class="chatbot-toggler" id="chatToggler">🤖</div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header"><h3>TwinBot <span>AI</span></h3><button id="closeChat">&times;</button></div>
+        <div class="chat-messages" id="chatMessages"><div class="message bot-message">مرحباً! أنا TwinBot، المساعد الذكى لمشروع Twin Team. كيف يمكننى مساعدتك؟</div></div>
         <div class="chat-input-area">
-            <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا..." autocomplete="off">
+            <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا...">
             <button id="sendChatBtn">➤</button>
         </div>
     </div>
@@ -142,18 +161,5 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.fullscreen@3.0.0/Control.FullScreen.js"></script>
     <script src="script.js"></script>
-    <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(registration => {
-          console.log('Service Worker registered successfully:', registration.scope);
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
-    });
-  }
-</script>
 </body>
 </html>
