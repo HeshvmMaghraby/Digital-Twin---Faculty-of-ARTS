@@ -1,4 +1,4 @@
-const CACHE_NAME = 'twin-team-v1';
+const CACHE_NAME = 'twin-team-v2';
 const assetsToCache = [
   './',
   './index.html',
